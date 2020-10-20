@@ -25,7 +25,12 @@ public class Transport implements Printable{
 
     @Override
     public String print() {
+            return "Transport = "+
+                    "\nгод выпуска = "+prodYear+
+                    "\nтип топлива = "+ fuelType+
+                    "\nмодель = "+ model;
+        }
 
-        return "Transport";
+
     }
 }

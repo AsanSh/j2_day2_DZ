@@ -20,7 +20,11 @@ public class Car extends Transport implements Printable {
     }
 
     public String print() {
-        return "🚗";
+        return super.print() +
+                "\nтип трансмисии = "+transmissionType +
+                "\nобьем "+ volume+
+                "\n🚗";
+        }
     }
 
     }

@@ -1,6 +1,6 @@
 package com.company;
 
-public class Bike extends Transport{
+public class Bike extends Transport {
 
     private String typeOfBike;  //горный или простой
     private int quantityOfWeel;
@@ -19,8 +19,11 @@ public class Bike extends Transport{
     public int getQuantityOfWeel() {
         return quantityOfWeel;
     }
-    public String print(){
-        return "\uD83D\uDEB2";
-    }
 
+    public String print() {
+        return super.print() +
+                "\nтип велосипеда = " + typeOfBike +
+                "\nколичество колес " + quantityOfWeel +
+                "\n🚲";
+    }
 }

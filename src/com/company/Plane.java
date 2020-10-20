@@ -19,9 +19,9 @@ public class Plane extends Transport{
         return quantityOfPassangers;
     }
     public String print(){
-        return "\uD83D\uDE86";
+        return super.print()+
+                "\nскорость = " + speedLimit +
+                "\nколичество пассажиров " + quantityOfPassangers +
+                "\n\uD83D\uDE86";
     }
-
-
-
 }

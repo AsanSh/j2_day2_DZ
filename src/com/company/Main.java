@@ -1,6 +1,7 @@
 package com.company;
 
 public class Main {
+
 /*
 2)  (Дэдлайн 19.09.2020 23:59) :
 a)  Доделать все пункты практического задания из презентации.
@@ -14,23 +15,35 @@ e)  В классе Main создать возвращаемый метод crea
 f)  В главном классе Main создать 3 различных объекта классов 2й, 3й и 4й с помощью метода createOcject, и распечатать по ним информацию методом print();
  */
 
-    public static void main(String[] args) {
+    public static void main(String[] args, Transport cars) {
 
+        createObject(cars);
 
-        Transport[] transport = {new Car(2012, "diesel", "BMW", "4WD", 4000),
+     /*  Transport[] transport = {new Car(2012, "diesel", "BMW", "4WD", 4000),
                 new Bike(2020, "Manual", "Dart", "Gornyi", 2),
                 new Train(1788, "coal", "Paasnger", 21, "Lux"),
                 new Plane(1965, "airDiesel", "Boeng", 1000, 265)};
 
-        for (int i = 0; i < transport.length; i++) {
+       for (int i = 0; i < transport.length; i++) {
             System.out.println(transport[i].getClass().getSimpleName() + transport[i].print());
-        }
+       }*/
     }
 
-    public static String createObject(String className) {
+    public static Transport createObject(Transport className) {
+        switch (className) {
+            case Car.class:
+                new Car(2012, "diesel", "BMW", "4WD", 4000);
+                break;
+            case Bike.class:
+                new Bike(2020, "Manual", "Dart", "Gornyi", 2);
+                break;
+        }
 
+ }
+
+        /*
         if (className.equals(Car.class)) {
-            System.out.println(new Car(2012, "diesel", "BMW", "4WD", 4000));
+            return new Car(2012, "diesel", "BMW", "4WD", 4000);
         } else {
             if (className.equals(Bike.class)) {
                 System.out.println(new Bike(2020, "Manual", "Dart", "Gornyi", 2));
@@ -38,7 +51,7 @@ f)  В главном классе Main создать 3 различных об
                 System.out.println(new Train(1788, "coal", "Paasnger", 21, "Lux"));
             }
         }
-        return "ne znau НЕ ПОНИМАЮ";
+        return createObject(className);*/
     }
-}
+
 

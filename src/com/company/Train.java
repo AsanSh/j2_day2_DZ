@@ -19,7 +19,11 @@ public class Train extends Transport implements Printable{
         return typeOfVagons;
     }
     public String print(){
-        return "\uD83D\uDE86";
+        return super.print()+
+            "\nколичество вагонов = " + howManyVagons +
+                    "\nтип вагонов " + typeOfVagons +
+                    "\n\uD83D\uDE86";
+        }
     }
 
-}
+
