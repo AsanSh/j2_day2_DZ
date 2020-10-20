@@ -23,8 +23,6 @@ public class Car extends Transport implements Printable {
         return "🚗";
     }
 
-    public String createObject() {
-        new Car();
     }
 
-}
+

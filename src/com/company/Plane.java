@@ -22,8 +22,6 @@ public class Plane extends Transport{
         return "\uD83D\uDE86";
     }
 
-    public String createObject(){
-        new Plane();
-    }
+
 
 }

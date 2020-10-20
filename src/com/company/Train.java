@@ -21,7 +21,5 @@ public class Train extends Transport implements Printable{
     public String print(){
         return "\uD83D\uDE86";
     }
-    public String createObject(){
-        new Train();
-    }
+
 }

@@ -26,11 +26,6 @@ public class Transport implements Printable{
     @Override
     public String print() {
 
-        return null;
+        return "Transport";
     }
-
-    //public createObject(){
-       // return
-    //}
-
 }
