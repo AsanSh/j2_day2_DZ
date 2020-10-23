@@ -2,56 +2,56 @@ package com.company;
 
 public class Main {
 
+
+    public static void main(String[] args) {
+        System.out.println(createObject("car").print());
+        System.out.println("------------------------------------");
+        System.out.println(createObject("bike").print());
+        System.out.println("------------------------------------");
+        System.out.println(createObject("train").print());
+        System.out.println("------------------------------------");
+        System.out.println(createObject("plane").print());
+        System.out.println("------------------------------------");
+    }
+
+    public static Printable createObject(String className) {
+        Printable printable = null; // спросил у ребят именное ушу строканы
+        if ("car".equals(className)) {
+            printable = new Car(2012, "diesel", "BMW", "4WD", 4000);
+        } else if ("bike".equals(className)) {
+            printable = new Bike(2020, "Manual", "Dart", "Gornyi", 2);
+        } else if ("train".equals(className)) {
+            printable = new Train(1788, "coal", "Paasnger", 21, "Lux");
+        } else if ("plane".equals(className)) {
+            printable = new Plane(1965, "airDiesel", "Boeng", 1000, 265);
+        }
+        return printable;
+
+    }
+}
+
+
 /*
-2)  (Дэдлайн 19.09.2020 23:59) :
-a)  Доделать все пункты практического задания из презентации.
-b)  Создать 2х уровневую иерархию из 4х классов (1й - родитель --> 2й, 3й, 4й - дочерние, с отличающимися полями).
-c)  Создать Интерфейс Printable с методом void print();
-d)  Реализовать интерфейс Printable классами 2й, 3й и 4й, переопределить метод интерфейса так чтобы он распечатывал всю информацию о свойствах объекта.
+ПРИ ИСПОЛЬЗОВАНИИ СВИТЧ У МЕНЯ ВЫХОДИТ ОШИБКА "REQUIRED INT" деп, ХОТЯ ТУУРАЛЕ
 
-e)  В классе Main создать возвращаемый метод createObject(String className), который умеет создавать объекты класса 2й, 3й и 4й и после создания и задания
-свойств объекту метод возвращает ссылку на объект (пульт). Можно использовать switch для того чтоб определить какого типа нужно создать экземпляр объекта.
-Например если в параметре передается “2й” метод должен создать объект именно этого типа.
-f)  В главном классе Main создать 3 различных объекта классов 2й, 3й и 4й с помощью метода createOcject, и распечатать по ним информацию методом print();
- */
-
-    public static void main(String[] args, Transport cars) {
-
-        createObject(cars);
-
-     /*  Transport[] transport = {new Car(2012, "diesel", "BMW", "4WD", 4000),
-                new Bike(2020, "Manual", "Dart", "Gornyi", 2),
-                new Train(1788, "coal", "Paasnger", 21, "Lux"),
-                new Plane(1965, "airDiesel", "Boeng", 1000, 265)};
-
-       for (int i = 0; i < transport.length; i++) {
-            System.out.println(transport[i].getClass().getSimpleName() + transport[i].print());
-       }*/
-    }
-
-    public static Transport createObject(Transport className) {
+  public static Printable createObject(String className) {
+        Printable printable = null;
         switch (className) {
-            case Car.class:
-                new Car(2012, "diesel", "BMW", "4WD", 4000);
+            case "car":
+                printable = new Car( 2012, "diesel", "BMW", "4WD", 4000);
                 break;
-            case Bike.class:
-                new Bike(2020, "Manual", "Dart", "Gornyi", 2);
+            case "bike":
+                printable = new Bike(2020, "Manual", "Dart", "Gornyi", 2);
                 break;
-        }
+            case "train":
+                printable = new Train(1788, "coal", "Paasnger", 21, "Lux");
+                break;
+            case "plane":
+                printable = new Plane(1965, "airDiesel", "Boeng", 1000, 265);
+                break;
+            default:
 
- }
+        } return printable;
 
-        /*
-        if (className.equals(Car.class)) {
-            return new Car(2012, "diesel", "BMW", "4WD", 4000);
-        } else {
-            if (className.equals(Bike.class)) {
-                System.out.println(new Bike(2020, "Manual", "Dart", "Gornyi", 2));
-            } else if (className.equals(Train.class)) {
-                System.out.println(new Train(1788, "coal", "Paasnger", 21, "Lux"));
-            }
-        }
-        return createObject(className);*/
     }
-
-
+*/

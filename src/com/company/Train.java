@@ -1,6 +1,6 @@
 package com.company;
 
-public class Train extends Transport implements Printable{
+public class Train extends Transport implements Printable {
 
     private int howManyVagons;
     private String typeOfVagons; //грузовой или пассажирский
@@ -18,12 +18,13 @@ public class Train extends Transport implements Printable{
     public String getTypeOfVagons() {
         return typeOfVagons;
     }
-    public String print(){
-        return super.print()+
-            "\nколичество вагонов = " + howManyVagons +
-                    "\nтип вагонов " + typeOfVagons +
-                    "\n\uD83D\uDE86";
-        }
+
+    public String print() {
+        return super.print() +
+                "\nколичество вагонов = " + howManyVagons +
+                "\nтип вагонов " + typeOfVagons +
+                "\n\uD83D\uDE86";
     }
+}
 
 

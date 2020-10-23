@@ -1,6 +1,6 @@
 package com.company;
 
-public class Plane extends Transport{
+public class Plane extends Transport implements Printable{
 
    private int speedLimit;
    private int quantityOfPassangers;

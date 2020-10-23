@@ -1,6 +1,6 @@
 package com.company;
 
-public class Bike extends Transport {
+public class Bike extends Transport implements Printable{
 
     private String typeOfBike;  //горный или простой
     private int quantityOfWeel;
